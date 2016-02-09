@@ -9,7 +9,7 @@ Instructions: Write a function that *always* returns the number 1.
 ===================== */
 
 var justOne = function() {
-
+  return 1
 };
 
 console.log('justOne success:', justOne() === 1);
@@ -18,8 +18,12 @@ console.log('justOne success:', justOne() === 1);
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
-var isEven = function() {
-
+var isEven = function(i) {
+  if (i % 2 === 0) {
+  return true;
+  } else {
+  return false;
+  }
 };
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
@@ -30,7 +34,7 @@ Instructions: Write a function that *always* returns false.
 ===================== */
 
 var justFalse = function() {
-
+  return isEven(justOne);
 };
 
 console.log('justFalse success:', justFalse() === false);
@@ -40,7 +44,7 @@ Instructions: Write a function that takes a boolean value and returns its opposi
 ===================== */
 
 var not = function() {
-
+  return !true;
 };
 
 console.log('not success:', not(true) === false);
@@ -51,7 +55,8 @@ Instructions: Write a function that returns true if a number is odd
 ===================== */
 
 var isOdd = function() {
-
+  if (isEven === false);
+  return not(false);
 };
 
 console.log('isOdd success:', isOdd(4) === false);
@@ -60,10 +65,18 @@ console.log('isOdd success:', isOdd(4) === false);
 Instructions: Write a function that takes a list of numbers and returns a list with only numbers above 10
 ===================== */
 
-var filterOutLessThan10 = function() {
-
+var filterOutLessThan10 = function(arr) {
+  var newArray = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 10) {
+          console.log(i, arr[i]);
+          newArray.push(arr[i]);
+        }
+    // return [i];
+  }
+  console.log(newArray);
 };
-
+filterOutLessThan10([100, 3, 17, 1]);
 console.log('filterOutLessThan10 success:', filterOutLessThan10([4, 11]) === [11]);
 
 /* =====================
